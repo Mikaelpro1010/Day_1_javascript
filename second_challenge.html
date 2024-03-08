@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // function input(labelNome, labelIdade, labelLinguagem){
+    //     window.prompt(labelNome)
+    //     window.prompt(labelIdade)
+    //     window.prompt(labelLinguagem)
+    // }
+
+    function coletarDados() {
+        labelNome = "Qual o seu nome?"
+        nome = window.prompt(labelNome)
+        labelIdade = "Qual é a sua idade?"
+        idade = window.prompt(labelIdade)
+        labelLinguagem = "Qual linguagem você coda?"
+        linguagem = window.prompt(labelLinguagem)
+
+        return {
+            nome: nome,
+            idade: idade,
+            linguagem: linguagem
+        };
+    }
+
+    function opcao(linguagem){
+        labelOpcao = "Você gosta de estudar "+ linguagem +" ? Responda com o número 1 para SIM ou 2 para NÃO."
+        opcao = window.prompt(labelOpcao)
+
+        if(opcao == 1){
+            alert("Muito bom! Continue estudando e você terá muito sucesso.")
+        } else if(opcao == 2){
+            alert("Ahh que pena... Já tentou aprender outras linguagens?")
+        } else{
+            alert("Opção inválida, por favor tenta novamente!")
+        }
+    }
+
+    function imprimirDados() {
+        dados = coletarDados()
+
+        nome = dados.nome
+        idade = dados.idade
+        linguagem = dados.linguagem
+
+        alert("Olá " + nome + ", você tem " + idade + " anos e já está aprendendo " + linguagem + "!", nome, idade, linguagem)
+
+        opcao(linguagem)
+    }
+
+    imprimirDados()
+</script>
