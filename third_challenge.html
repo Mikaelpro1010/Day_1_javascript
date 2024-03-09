@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    label = "Informe se deseja seguir na área de Front-End ou na área de Back-End"
+    opcaoArea = window.prompt(label)
+
+    if(opcaoArea == "Front-End"){
+        labelLinguagem = "Informe se deseja aprender React ou queira aprender Vue"
+        opcaoLinguagem = window.prompt(labelLinguagem)
+
+        if(opcaoLinguagem != "React" && opcaoLinguagem != "Vue"){
+            alert("Opção inválida, por favor, tente novamente!")
+        }
+
+        labelCrescimento = "caso queira se epecializar na área digite 'Especialista em Front-End' e caso queira se desenvolver para Full-Stack digite 'Full-Stack'"
+        opcaoCrescimento = window.prompt(labelCrescimento)
+
+        alert("Muito bem, você deseja seguir na área de "+ opcaoArea + " e almeja aprender "+ opcaoLinguagem + " para que assim possa se tornar "+ opcaoCrescimento +" no futuro, continue assim!")
+
+    } else if(opcaoArea == "Back-End"){
+        labelLinguagem = "Informe se deseja aprender C# ou queira aprender Java"
+        opcaoLinguagem = window.prompt(labelLinguagem)
+
+        if(opcaoLinguagem != "C#" && opcaoLinguagem != "Java"){
+            alert("Opção inválida, por favor, tente novamente!")
+        }
+
+        labelCrescimento = "caso queira se epecializar na área digite 'Especialista em Back-End' e caso queira se desenvolver para Full-Stack digite 'Full-Stack'"
+        opcaoCrescimento = window.prompt(labelCrescimento)
+
+        alert("Muito bem, você deseja seguir na área de "+ opcaoArea + " e almeja aprender "+ opcaoLinguagem + " para que assim possa se tornar "+ opcaoCrescimento +" no futuro, continue assim!")
+    } else{
+        alert("Opção inválida, por favor, tente novamente!")
+    }
+</script>
