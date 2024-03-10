@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    numeroSecreto = Math.floor(Math.random() * 10) + 1;
+
+    tentativas = 0
+    
+    while(tentativas < 3){
+        tentativas++
+        labelValor = "Qual o valor que você deseja chutar?"
+        valor = window.prompt(labelValor)
+
+        if(valor == numeroSecreto){
+            alert("Parabens, você acertou!")
+            break;
+        } else{
+            alert("Você errou, por favor, tente novamente!")
+        }
+        if(tentativas == 2){
+            alert("Game Over, o numero secreto era "+numeroSecreto)
+            break;
+        }
+    } 
+</script>
