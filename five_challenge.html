@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function adicionarElemento(lista, categoria, produto) {
+        if (!lista[categoria]) {
+            lista[categoria] = [];
+        }
+        lista[categoria].push(produto);
+    }
+
+    listaProdutos = {}
+
+    continuarAdicionando = true
+
+    while(continuarAdicionando){
+
+        labelAdicionar = "Você deseja adicionar um produto na sua lista lista de compras? \n 1.Sim \n 2.Não"
+        valor = window.prompt(labelAdicionar)
+
+        if(valor == "1"){
+            labelProduto = "Qual produto você deseja adicionar? Ex.Batata"
+            produto = window.prompt(labelProduto)
+    
+            labelCategoria = "Informe o número referente a categoria desejada: \n 1.Frutas \n 2.Laticinios \n 3.Congelados \n 4.Doces"
+            categoria = window.prompt(labelCategoria)
+    
+            if(categoria == 1){
+                categoria = "Frutas"
+            } else if(categoria == 2){
+                categoria = "Laticinios"
+            } else if(categoria == 3){
+                categoria = "Congelados"
+            } else{
+                categoria = "Doces"
+            }
+    
+            adicionarElemento(listaProdutos, categoria, produto);
+        } else if(valor == "2"){
+            continuarAdicionando = false
+        }
+    }
+
+    var resultado = "Lista de compras:\n";
+    for (var key in listaProdutos) {
+        resultado += key + ": " + listaProdutos[key].join(", ") + "\n";
+    }
+    alert(resultado);
+
+</script>
