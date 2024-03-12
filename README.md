@@ -9,13 +9,13 @@ Os desafios são organizados em diferentes níveis de dificuldade, desde inician
 1. Clone este repositório para o seu ambiente local:
 
     ```bash
-    git clone https://github.com/seu-usuario/desafios-logica-js.git
+    git clone https://github.com/Mikaelpro1010/Logica_JS.git
     ```
 
 2. Navegue até o diretório do projeto:
 
     ```bash
-    cd desafios-logica-js
+    cd Logica_js
     ```
 
 3. Abra qualquer desafio em um editor de texto ou IDE de sua escolha.
