@@ -1,1 +1,1 @@
-Desafios propostos pela plataforma de ensino Alura para aperfeiçoamento das habilidades em lógica de programação com a linguagem de Programação Javascript, sendo que ao decorrer de uma semana foram propostos diversos desafios interessantes para exercitar a lógica na prática!
+<p>Desafios propostos pela plataforma de ensino Alura para aperfeiçoamento das habilidades em lógica de programação com a linguagem de Programação Javascript, sendo que ao decorrer de uma semana foram propostos diversos desafios interessantes para exercitar a lógica na prática!</p>
