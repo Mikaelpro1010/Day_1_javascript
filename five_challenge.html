@@ -11,14 +11,8 @@
 </html>
 
 <script>
-    function adicionarElemento(lista, categoria, produto) {
-        if (!lista[categoria]) {
-            lista[categoria] = [];
-        }
-        lista[categoria].push(produto);
-    }
 
-    listaProdutos = {}
+    listaProdutos = []
 
     continuarAdicionando = true
 
@@ -27,7 +21,7 @@
         labelAdicionar = "Você deseja adicionar um produto na sua lista lista de compras? \n 1.Sim \n 2.Não"
         valor = window.prompt(labelAdicionar)
 
-        if(valor == "1"){
+        if(valor == 1){
             labelProduto = "Qual produto você deseja adicionar? Ex.Batata"
             produto = window.prompt(labelProduto)
     
@@ -44,16 +38,23 @@
                 categoria = "Doces"
             }
     
-            adicionarElemento(listaProdutos, categoria, produto);
-        } else if(valor == "2"){
+            var parChaveValor = {
+                produto: produto,
+                categoria: categoria,
+            };
+
+            listaProdutos.push(parChaveValor);
+        } else if(valor == 2){
             continuarAdicionando = false
         }
     }
 
-    var resultado = "Lista de compras:\n";
-    for (var key in listaProdutos) {
-        resultado += key + ": " + listaProdutos[key].join(", ") + "\n";
+    // Exibindo a lista de compras com produtos e categorias
+    var mensagem = "Lista de compras:\n";
+    for (var i = 0; i < listaProdutos.length; i++) {
+        mensagem += listaProdutos[i].categoria + ": " + listaProdutos[i].produto + "\n";
     }
-    alert(resultado);
+
+    alert(mensagem);
 
 </script>
