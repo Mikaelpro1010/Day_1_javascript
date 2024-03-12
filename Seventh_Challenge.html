@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function soma(valor1, valor2){
+        resultado = valor1 + valor2
+
+        return resultado
+    }
+    function subtracao(valor1, valor2){
+        resultado = valor1 - valor2
+
+        return resultado
+    }
+    function multiplicacao(valor1, valor2){
+        resultado = valor1 * valor2
+
+        return resultado
+    }
+    function divisao(valor1, valor2){
+        resultado = valor1 / valor2
+
+        return resultado
+    }
+
+    play = true
+
+    while(play){
+        labelValor1 = "Informe o primeiro valor desejado"
+        valor1 = parseInt(window.prompt(labelValor1))
+
+        labelValor2 = "Informe o segundo valor desejado"
+        valor2 = parseInt(window.prompt(labelValor2))
+
+        labelOperacao = "Informe qual operação você deseja executar: 1.Soma \n 2.Subtração \n 3.Multiplicação \n 4.Divisão"
+        operacao = window.prompt(labelOperacao)
+
+        if(operacao == 1){
+            resultadoSoma = soma(valor1, valor2)
+            alert("O valor da soma de " + valor1 + " + " + valor2 + " é igual a " + resultadoSoma)
+            play= false
+        }
+        if(operacao == 2){
+            resultadoSubtracao = subtracao(valor1, valor2)
+            alert("O valor da subtração de " + valor1 + " - " + valor2 + " é igual a " + resultadoSubtracao)
+            play= false
+        }
+        if(operacao == 3){
+            resultadoMultiplicacao = multiplicacao(valor1, valor2)
+            alert("O valor da multiplicação de " + valor1 + " * " + valor2 + " é igual a " + resultadoMultiplicacao)
+            play= false
+        }
+        if(operacao == 4){
+            resultadoDivisao = divisao(valor1, valor2)
+            alert("O valor da divisão de " + valor1 + " / " + valor2 + " é igual a " + resultadoDivisao)
+            play= false
+        }
+    }
+
+    alert("Até a próxima! :)")
+</script>
